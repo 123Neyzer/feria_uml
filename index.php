@@ -17,7 +17,7 @@ require(ROOT_PATH . DS . 'app' . DS . 'login' . DS . 'verificar-login.php');
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/creativetimofficial/tailwind-starter-kit/compiled-tailwind.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
   <link rel="stylesheet" href="inicio.css" />
-
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/creativetimofficial/tailwind-starter-kit/compiled-tailwind.min.css" />
   <!-- llamar estilos css -->
   <link rel="stylesheet" href="./navbar.css" />
@@ -108,15 +108,31 @@ require(ROOT_PATH . DS . 'app' . DS . 'login' . DS . 'verificar-login.php');
             </div>
           </form>
           <ul class="md:flex-col md:min-w-full flex flex-col list-none">
-            <li class="items-center">
+          <li class="items-center">
 
+<div>
+    <a class="text-blue-500 hover:text-blue-500 pt-8 text-xs uppercase py-3 font-bold block" href="index.php">
+        <i class="bx bx-tv opacity-75 mr-2 text-sm"></i>Inicio</a>
+</div>
+<div class="">
+    <a class="text-black hover:text-blue-500 pt-2 text-xs uppercase py-3 font-bold block" href="feed.php">
+    <i class='bx bxs-id-card opacity-75 mr-2 text-sm'></i>Feed</a>
+</div>
 
-              <a class="text-black hover:text-black text-xs uppercase py-3 font-bold block" href="index.php">
-                <i class="fas fa-tv opacity-75 mr-2 text-sm"></i>Inicio</a>
+<div class="inline-flex">
+    <a class=" text-black hover:text-blue-500 pt-2 text-xs uppercase py-3 font-bold block" href="perfil.php">
+        <i class='bx bx-user opacity-75 mr-2 text-sm'></i> Perfil</a>
+</div>
+<div class="">
+    <a class=" text-black hover:text-blue-500 pt-2 text-xs uppercase py-3 font-bold block" href="editar_perfil.php">
+        <i class='bx bxs-edit opacity-75 mr-2 text-sm'></i>Editar Perfil</a>
+</div>
+<div class="">
+    <a class="text-black hover:text-blue-500 pt-2 text-xs uppercase py-3 font-bold block" href="cambiar_contrasena.php">
+        <i class='bx bx-lock-alt opacity-75 mr-2 text-sm'></i>cambiar contraseña</a>
+</div>
 
-
-
-            </li>
+</li>
           </ul>
         </div>
       </div>
@@ -166,21 +182,23 @@ require(ROOT_PATH . DS . 'app' . DS . 'login' . DS . 'verificar-login.php');
                           Estudiantes de 1ro y 2do año
                         </h5>
                         <span class="font-semibold text-xl text-blueGray-700">
-                          350,897
+                          300
                         </span>
                       </div>
                       <div class="relative w-auto pl-4 flex-initial">
                         <div class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 shadow-lg rounded-full bg-red-500">
-                          <i class="far fa-chart-bar"></i>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 255);">
+                            <path d="M12 2a5 5 0 1 0 5 5 5 5 0 0 0-5-5zm0 8a3 3 0 1 1 3-3 3 3 0 0 1-3 3zm9 11v-1a7 7 0 0 0-7-7h-4a7 7 0 0 0-7 7v1h2v-1a5 5 0 0 1 5-5h4a5 5 0 0 1 5 5v1z"></path>
+                          </svg>
                         </div>
                       </div>
                     </div>
                     <p class="text-sm text-blueGray-400 mt-4">
                       <span class="text-emerald-500 mr-2">
-                        <i class="fas fa-arrow-up"></i> 3.48%
+                        <i class="fas fa-arrow-up"></i> 35%
                       </span>
                       <span class="whitespace-nowrap">
-                        Since last month
+                        Año 2024
                       </span>
                     </p>
                   </div>
@@ -192,24 +210,26 @@ require(ROOT_PATH . DS . 'app' . DS . 'login' . DS . 'verificar-login.php');
                     <div class="flex flex-wrap">
                       <div class="relative w-full pr-4 max-w-full flex-grow flex-1">
                         <h5 class="text-blueGray-400 uppercase font-bold text-xs">
-                          New users
+                          Estudiantes de 3ro y 4to Año
                         </h5>
                         <span class="font-semibold text-xl text-blueGray-700">
-                          2,356
+                          150
                         </span>
                       </div>
                       <div class="relative w-auto pl-4 flex-initial">
                         <div class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 shadow-lg rounded-full bg-orange-500">
-                          <i class="fas fa-chart-pie"></i>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 255);">
+                            <path d="M7.5 6.5C7.5 8.981 9.519 11 12 11s4.5-2.019 4.5-4.5S14.481 2 12 2 7.5 4.019 7.5 6.5zM20 21h1v-1c0-3.859-3.141-7-7-7h-4c-3.86 0-7 3.141-7 7v1h17z"></path>
+                          </svg>
                         </div>
                       </div>
                     </div>
                     <p class="text-sm text-blueGray-400 mt-4">
                       <span class="text-red-500 mr-2">
-                        <i class="fas fa-arrow-down"></i> 3.48%
+                        <i class="fas fa-arrow-down"></i> 15%
                       </span>
                       <span class="whitespace-nowrap">
-                        Since last week
+                        Año 2024
                       </span>
                     </p>
                   </div>
@@ -220,11 +240,11 @@ require(ROOT_PATH . DS . 'app' . DS . 'login' . DS . 'verificar-login.php');
                   <div class="flex-auto p-4">
                     <div class="flex flex-wrap">
                       <div class="relative w-full pr-4 max-w-full flex-grow flex-1">
-                        <h5 class="text-blueGray-400 uppercase font-bold text-xs">
-                          Sales
+                        <h5 class="text-blueGray-400 mt-1 mb-2 uppercase font-bold text-xs">
+                          Estudiantes de 5to Año
                         </h5>
                         <span class="font-semibold text-xl text-blueGray-700">
-                          924
+                          150
                         </span>
                       </div>
                       <div class="relative w-auto pl-4 flex-initial">
@@ -233,12 +253,12 @@ require(ROOT_PATH . DS . 'app' . DS . 'login' . DS . 'verificar-login.php');
                         </div>
                       </div>
                     </div>
-                    <p class="text-sm text-blueGray-400 mt-4">
+                    <p class="text-sm text-blueGray-400 mt-5">
                       <span class="text-orange-500 mr-2">
-                        <i class="fas fa-arrow-down"></i> 1.10%
+                        <i class="fas fa-arrow-down"></i> 15%
                       </span>
                       <span class="whitespace-nowrap">
-                        Since yesterday
+                        Año 2024
                       </span>
                     </p>
                   </div>
@@ -249,25 +269,31 @@ require(ROOT_PATH . DS . 'app' . DS . 'login' . DS . 'verificar-login.php');
                   <div class="flex-auto p-4">
                     <div class="flex flex-wrap">
                       <div class="relative w-full pr-4 max-w-full flex-grow flex-1">
-                        <h5 class="text-blueGray-400 uppercase font-bold text-xs">
-                          Performance
+                        <h5 class="text-blueGray-400 uppercase mt-1 mb-2 font-bold text-xs">
+                          Estudiantes egresados
                         </h5>
                         <span class="font-semibold text-xl text-blueGray-700">
-                          49,65%
+                          300
+
                         </span>
                       </div>
+
                       <div class="relative w-auto pl-4 flex-initial">
                         <div class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 shadow-lg rounded-full bg-lightBlue-500">
-                          <i class="fas fa-percent"></i>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 255);">
+                            <circle cx="12" cy="4" r="2"></circle>
+                            <path d="M12 18h2v-5h2V9c0-1.103-.897-2-2-2h-4c-1.103 0-2 .897-2 2v4h2v5h2z"></path>
+                            <path d="m18.446 11.386-.893 1.789C19.108 13.95 20 14.98 20 16c0 1.892-3.285 4-8 4s-8-2.108-8-4c0-1.02.892-2.05 2.446-2.825l-.893-1.789C3.295 12.512 2 14.193 2 16c0 3.364 4.393 6 10 6s10-2.636 10-6c0-1.807-1.295-3.488-3.554-4.614z"></path>
+                          </svg>
                         </div>
                       </div>
                     </div>
-                    <p class="text-sm text-blueGray-400 mt-4">
+                    <p class="text-sm text-blueGray-400 mt-5">
                       <span class="text-emerald-500 mr-2">
-                        <i class="fas fa-arrow-up"></i> 12%
+                        <i class="fas fa-arrow-up"></i> 35%
                       </span>
                       <span class="whitespace-nowrap">
-                        Since last month
+                        Año 2024
                       </span>
                     </p>
                   </div>
@@ -280,7 +306,7 @@ require(ROOT_PATH . DS . 'app' . DS . 'login' . DS . 'verificar-login.php');
 
       <div class="container">
         <div class="main-content">
-          <aside class="sidebar">
+          <!-- <aside class="sidebar">
             <button class="sidebar-toggle" aria-label="Mostrar filtros">▶</button>
             <div class="filters">
               <select id="carrera">
@@ -303,31 +329,44 @@ require(ROOT_PATH . DS . 'app' . DS . 'login' . DS . 'verificar-login.php');
                 <option value="5">5to año</option>
               </select>
             </div>
-          </aside>
+          </aside> -->
 
           <main class="content md:pl-8">
             <div class="tabs">
-              <button class="tab active" id="tab-activos">Estudiantes Activos</button>
-              <button class="tab" id="tab-egresados">Egresados</button>
+              <button class="inline-flex tab active" id="tab-recomendados"><svg class="mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgb(0, 4, 255);">
+                  <path d="M4.035 15.479A3.976 3.976 0 0 0 4 16c0 2.378 2.138 4.284 4.521 3.964C9.214 21.198 10.534 22 12 22s2.786-.802 3.479-2.036C17.857 20.284 20 18.378 20 16c0-.173-.012-.347-.035-.521C21.198 14.786 22 13.465 22 12s-.802-2.786-2.035-3.479C19.988 8.347 20 8.173 20 8c0-2.378-2.143-4.288-4.521-3.964C14.786 2.802 13.466 2 12 2s-2.786.802-3.479 2.036C6.138 3.712 4 5.622 4 8c0 .173.012.347.035.521C2.802 9.214 2 10.535 2 12s.802 2.786 2.035 3.479zm1.442-5.403 1.102-.293-.434-1.053A1.932 1.932 0 0 1 6 8c0-1.103.897-2 2-2 .247 0 .499.05.73.145l1.054.434.293-1.102a1.99 1.99 0 0 1 3.846 0l.293 1.102 1.054-.434C15.501 6.05 15.753 6 16 6c1.103 0 2 .897 2 2 0 .247-.05.5-.145.73l-.434 1.053 1.102.293a1.993 1.993 0 0 1 0 3.848l-1.102.293.434 1.053c.095.23.145.483.145.73 0 1.103-.897 2-2 2-.247 0-.499-.05-.73-.145l-1.054-.434-.293 1.102a1.99 1.99 0 0 1-3.846 0l-.293-1.102-1.054.434A1.935 1.935 0 0 1 8 18c-1.103 0-2-.897-2-2 0-.247.05-.5.145-.73l.434-1.053-1.102-.293a1.993 1.993 0 0 1 0-3.848z"></path>
+                  <path d="m15.742 10.71-1.408-1.42-3.331 3.299-1.296-1.296-1.414 1.414 2.704 2.704z"></path>
+                </svg>
+                Estudiantes recomendados</button>
+              <button class="inline-flex tab" id="tab-destacados"><svg class="mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgb(0, 4, 255);">
+                  <path d="M20.29 8.29 16 12.58l-1.3-1.29-1.41 1.42 2.7 2.7 5.72-5.7zM4 8a3.91 3.91 0 0 0 4 4 3.91 3.91 0 0 0 4-4 3.91 3.91 0 0 0-4-4 3.91 3.91 0 0 0-4 4zm6 0a1.91 1.91 0 0 1-2 2 1.91 1.91 0 0 1-2-2 1.91 1.91 0 0 1 2-2 1.91 1.91 0 0 1 2 2zM4 18a3 3 0 0 1 3-3h2a3 3 0 0 1 3 3v1h2v-1a5 5 0 0 0-5-5H7a5 5 0 0 0-5 5v1h2z"></path>
+                </svg>
+                Estudiantes destacados</button>
             </div>
 
-            <div class="students-grid" id="estudiantes-activos">
+            <div class="students-grid" id="estudiantes-recomendados">
               <div class="student-card">
                 <img src="./assets/img/perfil1.png" alt="Ana García" class="student-avatar">
                 <h3>Ana García</h3>
-                <p>Ingeniería Informática - 3º año</p>
+                <p>Ingeniería Informática - 4º año</p>
+                <a href="perfil.php" class="btn">Ver perfil</a>
+              </div>
+              <div class="student-card">
+                <img src="./assets/img/perfil7.png" alt="Jefferson Guillen" class="student-avatar">
+                <h3>Jefferson Guillén</h3>
+                <p> Farmacia - 3º año</p>
                 <a href="perfil.php" class="btn">Ver perfil</a>
               </div>
               <div class="student-card">
                 <img src="./assets/img/perfil5.png" alt="Carlos Rodríguez" class="student-avatar">
                 <h3>Carlos Rodríguez</h3>
-                <p>Administración de Empresas - 4º año</p>
+                <p>Ingeniería Informática - 4º año</p>
                 <a href="perfilcarlos.php" class="btn">Ver perfil</a>
               </div>
               <div class="student-card">
                 <img src="./assets/img/perfil3.png" alt="Laura Martínez" class="student-avatar">
                 <h3>Laura Martínez</h3>
-                <p>Psicología - 2º año</p>
+                <p>Psicología - 3º año</p>
                 <a href="#" class="btn">Ver perfil</a>
               </div>
               <div class="student-card">
@@ -336,9 +375,16 @@ require(ROOT_PATH . DS . 'app' . DS . 'login' . DS . 'verificar-login.php');
                 <p>Ingeniería Informática - 5º año</p>
                 <a href="#" class="btn">Ver perfil</a>
               </div>
+              <div class="student-card">
+                <img src="./assets/img/perfil8.png" alt="Leyla Guzman" class="student-avatar">
+                <h3>Leyla Guzmán</h3>
+                <p>Enfermería - 3º año</p>
+                <a href="perfil.php" class="btn">Ver perfil</a>
+              </div>
             </div>
 
-            <div class="students-grid" id="estudiantes-egresados" style="display: none;">
+
+            <div class="students-grid" id="estudiantes-destacados" style="display: none;">
               <div class="student-card">
                 <img src="./assets/img/perfil2.png" alt="María López" class="student-avatar">
                 <h3>María López</h3>
@@ -351,6 +397,12 @@ require(ROOT_PATH . DS . 'app' . DS . 'login' . DS . 'verificar-login.php');
                 <p>Ingeniería Informática - Egresado</p>
                 <a href="#" class="btn">Ver perfil</a>
               </div>
+              <div class="student-card">
+                <img src="./assets/img/perfil9.png" alt="Javier Fernández" class="student-avatar">
+                <h3>Janier Morán</h3>
+                <p>Ingles - Egresado</p>
+                <a href="#" class="btn">Ver perfil</a>
+              </div>
             </div>
           </main>
         </div>
@@ -358,33 +410,20 @@ require(ROOT_PATH . DS . 'app' . DS . 'login' . DS . 'verificar-login.php');
 
       <script>
         // Funcionalidad para cambiar entre pestañas
-        document.getElementById('tab-activos').addEventListener('click', function() {
+        document.getElementById('tab-recomendados').addEventListener('click', function() {
           this.classList.add('active');
-          document.getElementById('tab-egresados').classList.remove('active');
-          document.getElementById('estudiantes-activos').style.display = 'grid';
-          document.getElementById('estudiantes-egresados').style.display = 'none';
+          document.getElementById('tab-destacados').classList.remove('active');
+          document.getElementById('estudiantes-recomendados').style.display = 'grid';
+          document.getElementById('estudiantes-destacados').style.display = 'none';
         });
 
-        document.getElementById('tab-egresados').addEventListener('click', function() {
+        document.getElementById('tab-destacados').addEventListener('click', function() {
           this.classList.add('active');
-          document.getElementById('tab-activos').classList.remove('active');
-          document.getElementById('estudiantes-egresados').style.display = 'grid';
-          document.getElementById('estudiantes-activos').style.display = 'none';
+          document.getElementById('tab-recomendados').classList.remove('active');
+          document.getElementById('estudiantes-destacados').style.display = 'grid';
+          document.getElementById('estudiantes-recomendados').style.display = 'none';
         });
 
-        // Funcionalidad para desplegar/retraer la barra lateral
-        document.querySelector('.sidebar-toggle').addEventListener('click', function() {
-          const sidebar = document.querySelector('.sidebar');
-          sidebar.classList.toggle('expanded');
-
-          if (sidebar.classList.contains('expanded')) {
-            this.textContent = '◀';
-            this.setAttribute('aria-label', 'Ocultar filtros');
-          } else {
-            this.textContent = '▶';
-            this.setAttribute('aria-label', 'Mostrar filtros');
-          }
-        });
 
         // Nota: La funcionalidad de filtrado requeriría JavaScript más complejo
         // y probablemente una base de datos en el lado del servidor.

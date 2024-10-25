@@ -1,6 +1,14 @@
 <?php
 // Require the constants
 require('./app/config/constantes.php');
+
+// if get request logout is set, destroy the session
+if (isset($_GET['login'])) {
+    session_start();
+    session_destroy();
+    header("Location: index.php");
+    exit;
+}
 ?>
 <!doctype html>
 <html lang="es">
@@ -19,160 +27,143 @@ require('./app/config/constantes.php');
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
-        * {
-  margin: 0;
-  padding: 0;
-  font-family: arial;
-  color: #fff;
+ body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100%;
 }
-body {
-  width: 100vw;
-  height: 100vh;
-  background: #ffffff;
-  display: grid;
-  justify-content: center;
-  align-content: center;
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding-top: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+
 }
-::-webkit-input-placeholder {
-  color: #eee;
+.card {
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    padding: 2rem;
 }
-.wrapper {
-  position: relative;
-  width: 800px;
-  height: auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  border: 3px solid #76bdff;
-  box-shadow: 0 0 50px 0 #099dff;
+.card-header {
+    text-align: center;
+    margin-bottom: 5px;
+    background: linear-gradient(45deg,  rgb(0, 30, 255),  rgb(0, 300, 255));
+    color: white;
+    border-radius: 5px;
+}
+.logo {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 1rem;
+}
+.logo svg {
+    width: 40px;
+    height: 40px;
+    fill: white;
 }
 
-.form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+
+.form-group {
+    margin-bottom: 1rem;
 }
-.title {
-  padding-top: 20px;
-  padding-bottom: 10px;
-  font-size: 17px;
-  color:#000000;
+.label {
+    display: block;
+    margin-bottom: 0px;
+    font-weight: bold;
 }
-.inp {
-  padding-bottom: 5px;
-  border-bottom: 2px solid #eee;
+.input, select {
+    width: 100%;
+    padding-left: 0.5rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.25rem;
+    font-size: 1rem;
 }
-.input {
-  border: none;
-  outline: none;
-  background: none;
-  width: 260px;
-  margin-top: 10px;
-  padding-right: 10px;
-  font-size: 14px;
-  color: rgb(0, 4, 255);
+.submit {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 15px;
+    background: rgb(0, 50, 270);
+    color: white;
+    border: none;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 1.3s;
 }
-.btnagregar {
-  border: none;
-  outline: none;
-  width: 288px;
-  margin-top: 15px;
-  padding: 10px 0;
-  font-size: 15px;
-  border-radius: 40px;
-  letter-spacing: 1px;
-  cursor: pointer;
-  color: #ffffff;
-  background: linear-gradient(45deg,  rgb(0, 4, 255), #76bdff);
+.submit:hover {
+    background: rgb(0, 170, 255);
 }
-.footer {
-  margin-top: 15px;
-  margin-bottom: 15px;
-  padding-left: 20px;
-  letter-spacing: 0.5px;
-  font-size: 14px;
-  color: #000000;
-}
+
 .link {
-  color: #76bdff;
-  text-decoration: none;
-  padding-left: 5px;
+    color: #4a5568;
+    text-decoration: none;
 }
-.banner {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 460px;
-  height: 407px;
-  background: linear-gradient(to right, rgb(0, 4, 255), #76bdff);
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 60% 100%);
-  padding-right: 60px;
-  text-align: right;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-end;
+.link:hover {
+    text-decoration: underline;
 }
-
-.wel_text {
-  font-size: 40px;
-  margin-top: -50px;
-  line-height: 50px;
-}
-.para {
-  margin-top: 10px;
-  font-size: 18px;
-  line-height: 24px;
-  letter-spacing: 1px;
-}
-
-.fondonavegacion{
-  color: rgb(255, 255, 255);
-  border: none;
-  padding: 5px 10px;
-  border-radius: 5px;
-  box-shadow: 4px 4px 2px 1px rgba(0, 0, 0, 0.2);
+.card-footer{
+    /* alinear al centro */
+    text-align: center;
+    justify-content: center;
+    padding-top: 10px;
+    background-color: white;
+    
 }
     </style>
 </head>
 
 <body>
-    <div class="wrapper">
-    <form class="form" method="POST">
-            <h3 class="text-center title">Crear usuario Nuevo</h3>
+<div class="container">
+        <div class="card">
+            <div class="card-header">
+                <div class="logo">
+                <img src="./assets/img/favicon.ico" alt="">
+                </div>
+                <p>Crear Usuario Nuevo</p>
+            </div>
+            <form class="form" method="POST">
             <?php
             include "modelo/conexion.php";
             include "controlador/crear_usuario.php";
             ?>
-
-            <div class="inp">
-              <input for="exampleInputEmail1" type="text" class="input form-control" name="name" placeholder="Nombre">
+                <div class="form-group">
+                    <label for="nombre" class="label">Nombre completo</label>
+                    <input for="exampleInputEmail1" type="text" class="input form-control" name="name" placeholder="Nombre">
+                    </div>
+                 <div class="form-group">
+                    <label for="confirm-password" class="label">Telefono</label>
+                    <input for="phone" type="text" class="input form-control" name="phone" placeholder="Telefono">
+                    </div>
+                <div class="form-group">
+                    <label for="email" class="label">Correo electrónico</label>
+                    <input for="email" type="text" class="input form-control" name="email" placeholder="correo o usuario">
+                    </div>  
+                
+                <div class="form-group">
+                    <label for="password" class="label">Contraseña</label>
+                    <input type="password" for="pass" class="input form-control" name="pass"placeholder="Contraseña">
+                    </div>
+             
+                
+                    <button type="submit" name="btnregistrar" value="ok" class="btnagregar submit btn btn-primary">Registrar</button>
+                    </form>
+            <div class="card-footer">
+            <p class="footer">ya tienes una cuenta <a href="login.php" class="link">Inicia sesión</a></p>
             </div>
-
-            <div class="inp">
-              <input for="phone" type="text" class="input form-control" name="phone" placeholder="Telefono">
-            </div>
-
-            <div class="inp">
-              <input for="email" type="text" class="input form-control" name="email" placeholder="correo o usuario">
-            </div>
-
-            <div class="inp">
-              <input type="password" for="pass" class="input form-control" name="pass"placeholder="Contraseña">
-            </div>
-            <div class="centrar">
-              <button type="submit" name="btnregistrar" value="ok" class="btnagregar  btn btn-primary">agregar</button>
-              <p class="footer">ya tienes una cuenta <a href="login.php" class="link">Inicia sesión</a></p>
-            </div>
-          </form>
-    
-        <div class="banner">
-            <h1 class="wel_text">Bienvenid@</h1><br>
-            <p class="para"></p>
         </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-
 </body>
 
 </html>

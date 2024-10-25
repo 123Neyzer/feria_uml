@@ -55,7 +55,7 @@ if (isset($_GET['login'])) {
 .card-header {
     text-align: center;
     margin-bottom: 5px;
-    background: linear-gradient(45deg,  rgb(0, 30, 255),  rgb(0, 300, 255));
+    background: linear-gradient(to right, #0066ff, #00ccff);
     color: white;
     border-radius: 5px;
 }

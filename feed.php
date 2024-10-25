@@ -108,28 +108,32 @@ require(ROOT_PATH . DS . 'app' . DS . 'login' . DS . 'verificar-login.php');
             </div>
           </form>
           <ul class="md:flex-col md:min-w-full flex flex-col list-none">
-          <li class="items-center">
+                        <li class="items-center">
 
-<div>
-    <a class="text-black hover:text-blue-500 pt-8 text-xs uppercase py-3 font-bold block" href="index.php">
-        <i class="bx bx-tv opacity-75 mr-2 text-sm"></i>Inicio</a>
-</div>
+                            <div>
+                                <a class="text-black hover:text-blue-500 pt-8 text-xs uppercase py-3 font-bold block" href="index.php">
+                                    <i class="bx bx-tv opacity-75 mr-2 text-sm"></i>Inicio</a>
+                            </div>
+                            <div class="">
+                                <a class="text-blue-500 hover:text-blue-500 pt-2 text-xs uppercase py-3 font-bold block" href="feed.php">
+                                    <i class='bx bxs-id-card opacity-75 mr-2 text-sm'></i>Feed</a>
+                            </div>
 
-<div class="inline-flex">
-    <a class=" text-black hover:text-blue-500 pt-2 text-xs uppercase py-3 font-bold block" href="perfil.php">
-        <i class='bx bx-user opacity-75 mr-2 text-sm'></i> Perfil</a>
-</div>
-<div class="">
-    <a class=" text-black hover:text-blue-500 pt-2 text-xs uppercase py-3 font-bold block" href="editar_perfil.php">
-        <i class='bx bxs-edit opacity-75 mr-2 text-sm'></i>Editar Perfil</a>
-</div>
-<div class="">
-    <a class="text-black hover:text-blue-500 pt-2 text-xs uppercase py-3 font-bold block" href="cambiar_contrasena.php">
-        <i class='bx bx-lock-alt opacity-75 mr-2 text-sm'></i>cambiar contraseña</a>
-</div>
+                            <div class="inline-flex">
+                                <a class=" text-black hover:text-blue-500 pt-2 text-xs uppercase py-3 font-bold block" href="perfil.php">
+                                    <i class='bx bx-user opacity-75 mr-2 text-sm'></i> Perfil</a>
+                            </div>
+                            <div class="">
+                                <a class=" text-black hover:text-blue-500 pt-2 text-xs uppercase py-3 font-bold block" href="editar_perfil.php">
+                                    <i class='bx bxs-edit opacity-75 mr-2 text-sm'></i>Editar Perfil</a>
+                            </div>
+                            <div class="">
+                                <a class="text-black hover:text-blue-500 pt-2 text-xs uppercase py-3 font-bold block" href="cambiar_contrasena.php">
+                                    <i class='bx bx-lock-alt opacity-75 mr-2 text-sm'></i>cambiar contraseña</a>
+                            </div>
 
-</li>
-          </ul>
+                        </li>
+                    </ul>
         </div>
       </div>
     </nav>
@@ -139,23 +143,19 @@ require(ROOT_PATH . DS . 'app' . DS . 'login' . DS . 'verificar-login.php');
         <a class="text-white text-sm uppercase hidden pt-4 lg:inline-block font-semibold" href="./index.php"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
   <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
 </svg></a>
-          <form class="md:flex hidden flex-row flex-wrap items-center lg:ml-auto mr-3">
-            <div class="relative flex w-full flex-wrap items-stretch">
-              <span class="z-10 h-full leading-snug font-normal absolute text-center text-blueGray-300 absolute bg-transparent rounded text-base items-center justify-center w-8 pl-3 py-3"><i class="fas fa-search"></i></span>
-              <input type="text" placeholder="Search here..." class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 relative bg-white bg-white rounded text-sm shadow outline-none focus:outline-none focus:ring w-full pl-10" />
-            </div>
-          </form>
-          <ul class="flex-col md:flex-row list-none items-center hidden md:flex">
+          
+<ul class="flex-col md:flex-row list-none items-center hidden md:flex">
             <a class="text-blueGray-500 block" href="#pablo" onclick="openDropdown(event,'user-dropdown')">
               <div class="items-center flex">
                 <span class="w-12 h-12 text-sm text-white bg-blueGray-200 inline-flex items-center justify-center rounded-full"><img alt="..." class="w-full rounded-full align-middle border-none shadow-lg" src="./assets/img/usuario.jpg" /></span>
               </div>
             </a>
             <div class="hidden bg-white text-base z-50 float-left py-2 list-none text-left rounded shadow-lg mt-1" style="min-width: 12rem;" id="user-dropdown">
-              <a href="perfil.php" class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700">Perfil</a><a href="#pablo" class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700">Another action</a>
+              <a href="perfil.php" class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700">Perfil</a>
+              <a href="editar_perfil.php" class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700">Editar perfil</a>
 
-              <a href="Crear_usuario.php" class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700">
-                Crear usuario Nuevo
+              <a href="cambiar_contrasena.php" class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700">
+                Cambiar contraseña
               </a>
 
 
@@ -166,27 +166,23 @@ require(ROOT_PATH . DS . 'app' . DS . 'login' . DS . 'verificar-login.php');
         </div>
       </nav>
       <!-- Header -->
-      <div class="relative radientback  h-24 pt-12">
+      <div class="relative gradient  h-24 pt-12">
         <div class="px-4 md:pl-20 pr-10 mx-auto w-full">
-         
-       
-    <style>
+        </div>
+      </div>
+ 
+  <style>
+      .gradient{
+                        background: linear-gradient(to right, #0066ff, #00ccff);
+
+                      }
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f0f2f5;
         }
-        .container {
-            /* alinear todo al centro */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
+        
         .create-post {
             flex: 1;
             background-color: white;
@@ -195,13 +191,7 @@ require(ROOT_PATH . DS . 'app' . DS . 'login' . DS . 'verificar-login.php');
             margin-right: 20px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
-        .feed {
-            flex: 1;
-            background-color: white;
-            border-radius: 8px;
-            padding: 20px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
+        
         h2 {
             color: #1a73e8;
             margin-top: 0;
@@ -237,9 +227,8 @@ require(ROOT_PATH . DS . 'app' . DS . 'login' . DS . 'verificar-login.php');
         .profile-card {
             background-image: url(./assets/img/feedheaderinf.png);
             border-radius: 8px;
-            padding: 20px;
+            padding: 20px;        
             text-align: center;
-            margin-bottom: 20px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
         .profile-image {
@@ -285,9 +274,39 @@ require(ROOT_PATH . DS . 'app' . DS . 'login' . DS . 'verificar-login.php');
         .view-profile:hover {
             background-color: #1557b0;
         }
+        .container {
+            /* alinear todo al centro */
+            display: flex;
+            background-color: white;
+            justify-content: center;
+            margin-left: 10px;
+            align-items: center;
+            width: 80%;
+            max-width: 1200px;
+            padding-top: 0%;
+            margin: 0 auto;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        .contenedor{
+            flex: 1;
+            background-color:#f0f2f5;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .feed {
+            flex: 1;
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
     </style>
 
     <div class="container">
+        <div class="contenedor">
         <div class="feed">
             <div class="profile-card">
                 <img src="./assets/img/perfil5.png" alt="Carlos Rodríguez" class="profile-image">
@@ -295,12 +314,50 @@ require(ROOT_PATH . DS . 'app' . DS . 'login' . DS . 'verificar-login.php');
                 <div class="profile-info">Ingeniería Informática - 4º año</div>
                 <a href="#" class="view-profile">Ver perfil</a>
             </div>
+        </div>
             <!-- Puedes agregar más tarjetas de perfil aquí -->
+            <div class="feed">
+            <div class="profile-card">
+                <img src="./assets/img/perfil5.png" alt="Carlos Rodríguez" class="profile-image">
+                <div class="profile-name">Carlos Rodríguez</div>
+                <div class="profile-info">Ingeniería Informática - 4º año</div>
+                <a href="#" class="view-profile">Ver perfil</a>
+            </div>
+            </div>
+            <div class="feed">
+            <div class="profile-card">
+                <img src="./assets/img/perfil5.png" alt="Carlos Rodríguez" class="profile-image">
+                <div class="profile-name">Carlos Rodríguez</div>
+                <div class="profile-info">Ingeniería Informática - 4º año</div>
+                <a href="#" class="view-profile">Ver perfil</a>
+            </div>
+            </div>
+            <div class="feed">
+            <div class="profile-card">
+                <img src="./assets/img/perfil5.png" alt="Carlos Rodríguez" class="profile-image">
+                <div class="profile-name">Carlos Rodríguez</div>
+                <div class="profile-info">Ingeniería Informática - 4º año</div>
+                <a href="#" class="view-profile">Ver perfil</a>
+            </div>
+            </div>
+            <div class="feed">
+            <div class="profile-card">
+                <img src="./assets/img/perfil5.png" alt="Carlos Rodríguez" class="profile-image">
+                <div class="profile-name">Carlos Rodríguez</div>
+                <div class="profile-info">Ingeniería Informática - 4º año</div>
+                <a href="#" class="view-profile">Ver perfil</a>
+            </div>
+            </div>
+            <div class="feed">
+            <div class="profile-card">
+                <img src="./assets/img/perfil5.png" alt="Carlos Rodríguez" class="profile-image">
+                <div class="profile-name">Carlos Rodríguez</div>
+                <div class="profile-info">Ingeniería Informática - 4º año</div>
+                <a href="#" class="view-profile">Ver perfil</a>
+            </div>
+           </div>
         </div>
     </div>
-
-  </div>
-  </div>
 
 
   

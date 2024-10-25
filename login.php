@@ -54,8 +54,9 @@ if (isset($_GET['logout'])) {
             text-align: center;
             color: white;
             margin-bottom: 10px;
-            background: linear-gradient(45deg,  rgb(0, 30, 255),  rgb(0, 300, 255));
+            background: linear-gradient(to right, #0066ff, #00ccff);
 
+                      
         }
 
         .logo {

@@ -154,10 +154,11 @@ require(ROOT_PATH . DS . 'app' . DS . 'login' . DS . 'verificar-login.php');
               </div>
             </a>
             <div class="hidden bg-white text-base z-50 float-left py-2 list-none text-left rounded shadow-lg mt-1" style="min-width: 12rem;" id="user-dropdown">
-              <a href="perfil.php" class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700">Perfil</a><a href="#pablo" class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700">Another action</a>
+              <a href="perfil.php" class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700">Perfil</a>
+              <a href="editar_perfil.php" class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700">Editar perfil</a>
 
-              <a href="Crear_usuario.php" class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700">
-                Crear usuario Nuevo
+              <a href="cambiar_contrasena.php" class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700">
+                Cambiar contraseña
               </a>
 
 
@@ -168,7 +169,12 @@ require(ROOT_PATH . DS . 'app' . DS . 'login' . DS . 'verificar-login.php');
         </div>
       </nav>
       <!-- Header -->
-      <div class="relative radientback md:pt-24 pb- h-auto pb-12 pt-12">
+       <style>
+          .gradient{
+           background: linear-gradient(to right, #0066ff, #00ccff);
+          }
+       </style>
+      <div class="relative gradient md:pt-24 pb- h-auto pb-12 pt-12">
         <div class="px-4 md:pl-20 pr-10 mx-auto w-full">
           <div>
             <!-- Card stats -->

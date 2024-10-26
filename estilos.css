@@ -281,8 +281,6 @@ background: linear-gradient(45deg,  rgb(0, 4, 255), #76bdff);
   border-radius: 5px;
   box-shadow: 4px 4px 2px 1px rgba(0, 0, 0, 0.2);
 }
-.contenedornavegacion{
-}
 .botonwarning{
   background: #ff8800;
   color: rgb(255, 255, 255);

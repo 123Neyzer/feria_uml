@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="shortcut icon" href="./assets/img/favicon.ico" />
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- iimportar tailwind -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.2/dist/tailwind.min.css" rel="stylesheet">
+    <title>Bienvenido a Nuestro Sitio</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            height: 100%;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        header {
+            background-color: #ffffff;
+            color: white;
+            padding: 70px;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+                       
+        .hero {
+            background-image: url('./assets/img/presentacion.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 800px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            margin-bottom: 130px;
+            color: white;
+            position: relative;
+    
+        }
+       
+        .hero-content {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 2rem;
+            border-radius: 10px;
+            margin-top: 180px;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        .btn {
+/* alinear al centro de alto */
+top: 50%;
+left: 50%;
+            display: inline-block;    
+            background-color: #4292ee;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-bottom: 100px;
+            transition: background-color 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #0753f8;
+        }
+        .features {
+            padding-top: 25px;
+            padding-left: 3rem 0;
+            padding-right: 3rem 0;
+            padding-bottom: 25px;
+            background-color: #f4f4f4;
+            margin-bottom: 100px;
+            margin-top: 230px;
+            /* alinear el boton de la etiqueta a al centro */
+
+        }
+        main{
+            text-align: center;
+
+        }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        .feature {
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        footer {
+            background-color: #34495e;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+        .h1b{
+            margin-bottom: 25px;
+        }
+         
+                        .user-icon {
+                            /* ALINEAR AL CENTRO */
+                            top:15%;
+                            left: 40%;
+                            position: relative;
+                            width: 300px;
+                            height: 300px;
+                            background-image: url(./assets/img/favicon.ico);
+                            display: flex;
+                            position: absolute;
+                            justify-content: center;
+                            align-items: center;
+                            z-index: 2;
+                        }
+                      
+
+        
+    </style>
+</head>
+<body>
+    
+
+    <main>
+            <div class="user-icon rounded-full"><img class="rounded-full" src="./assets/img/favicon.ico" alt=""></div>
+        
+        <section class="hero">
+            
+            <div class="hero-content ">
+                <h1>Bienvenidos a nuestro sitio web TalentoUML</h1>
+                <p></p>
+            </div>
+        </section>
+
+        <section id="caracteristicas" class="features">
+            <div class="container">
+                <h2  class="h1b">¿Eres una empresa en busca de talento?</h2>
+                <div class="feature-grid">
+                    <div class="feature">
+                        <h3></h3>
+                        <p class="mt-10">Descubre a los mejores candidatos, revisa sus habilidades, experiencias, logros y encuentra al próximo miembro valioso de tu equipo.
+
+                        </p>
+                    </div>
+                    <div class="feature">
+                        <h3></h3>
+                        <p>En TalentoUML, conectamos a los futuros profesionales con las empresas líderes del mercado. Nuestra plataforma permite a las empresas explorar perfiles detallados de estudiantes universitarios, facilitando la identificación de talentos que se alineen con sus necesidades y objetivos. </p>
+                    </div>
+                    <div class="feature">
+                        <h3>¿Eres un estudiante buscando oportunidades?</h3>
+                        <p class="mt-4">Crea un perfil atractivo, destaca tus fortalezas y conecta con empresas que valoran tu potencial.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <p class="mt-6">En TalentoUML, creemos en el poder de las conexiones y en la creación de oportunidades para un futuro brillante.
+            </p>
+            
+        </section>
+        <a href="login.php" class="btn">Iniciar Sesión</a>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 TalentoUML.  UML SEDE OCOTAL.</p>
+        </div>
+    </footer>
+</body>
+</html>

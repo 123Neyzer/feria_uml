@@ -50,115 +50,53 @@ require(ROOT_PATH . DS . 'app' . DS . 'login' . DS . 'verificar-login.php');
 <body class="text-blueGray-700 antialiased">
     <noscript>Foodapp</noscript>
     <div id="root">
-    <nav class="fondonavegacion md:left-0 md:block md:fixed md:top-0 md:bottom-0 md:overflow-y-auto md:flex-row md:flex-nowrap md:overflow-hidden shadow-xl bg-white flex flex-wrap items-center justify-between relative md:w-72 z-10 py-4 px-6">
-            <div class="contenedornavegacion md:flex-col md:items-stretch md:min-h-full md:flex-nowrap px-0 flex flex-wrap items-center justify-between w-full mx-auto">
-                <button class="cursor-pointer text-black opacity-50 md:hidden px-3 py-1 text-xl leading-none bg-transparent rounded border border-solid border-transparent" type="button" onclick="toggleNavbar('example-collapse-sidebar')">
-                    <i class="fas fa-bars"></i></button>
-                <a class="nombreinicionavbar md:block text-left md:pb-2 text-blueGray-600 mr-0 inline-block whitespace-nowrap text-sm uppercase font-bold py-4 px-0" href="javascript:void(0)">
-                    <?php
-                    echo $_SESSION["name"];
-                    ?>
-                </a>
-                <ul class="md:hidden items-center flex flex-wrap list-none">
-                    <li class="inline-block relative">
-                        <a class="text-blueGray-500 block py-1 px-3" href="#pablo" onclick="openDropdown(event,'notification-dropdown')"><i class="fas fa-bell"></i></a>
-                        <div class="hidden bg-white text-base z-50 float-left py-2 list-none text-left rounded shadow-lg mt-1" style="min-width: 12rem;" id="notification-dropdown">
+    <nav class="fondonavegacion md:w-72 md:left-0 md:block md:fixed md:top-0 md:bottom-0 md:overflow-y-auto md:flex-row md:flex-nowrap md:overflow-hidden shadow-xl bg-white flex flex-wrap items-center justify-between relative z-10 py-4 px-6">
+      <div class="contenedornavegacion md:flex-col md:items-stretch md:min-h-full md:flex-nowrap px-0 flex flex-wrap items-center justify-between w-full mx-auto">
+        <button class="cursor-pointer text-black opacity-50 md:hidden px-3 py-1 text-xl leading-none bg-transparent rounded border border-solid border-transparent" type="button" onclick="toggleNavbar('example-collapse-sidebar')">
+          <i class="fas fa-bars"></i></button>
+        <a class="nombreinicionavbar md:block text-left md:pb-2 text-blueGray-600 mr-0 inline-block whitespace-nowrap text-sm uppercase font-bold py-4 px-0" href="javascript:void(0)">
+          <?php
+          echo $_SESSION["name"];
+          ?>
+        </a>
 
-                            <a href="#pablo" class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700">
-                                Action</a>
-
-                            <a href="#pablo" class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700">Another action</a>
-
-                            <a href="Crear_usuario.php" class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700">
-                                crear usuario Nuevo
-                            </a>
-
-                            <div class="h-0 my-2 border border-solid border-blueGray-100"></div>
-
-                            <a href="login.php?logout=1" class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700">
-                                Cerrar sesión</a>
-                        </div>
-                    </li>
-                    <li class="inline-block relative">
-                        <a class="text-blueGray-500 block" href="#pablo" onclick="openDropdown(event,'user-responsive-dropdown')">
-                            <div class="items-center flex">
-                                <span class="w-12 h-12 text-sm text-white bg-blueGray-200 inline-flex items-center justify-center rounded-full"><img alt="..." class="w-full rounded-full align-middle border-none shadow-lg" src="./assets/img/usuario.jpg" /></span>
-                            </div>
-                        </a>
-                        <div class="hidden bg-white text-base z-50 float-left py-2 list-none text-left rounded shadow-lg mt-1" style="min-width: 12rem;" id="user-responsive-dropdown">
-                            <a href="#pablo" class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700">
-                                Action</a>
-
-                            <a href="#pablo" class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700">Another action</a>
-
-                            <a href="Crear_usuario.php" class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700">
-                                crear usuario Nuevo
-                            </a>
-
-                            <div class="h-0 my-2 border border-solid border-blueGray-100"></div>
-
-                            <a href="login.php?logout=1" class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700">
-                                Cerrar sesión</a>
-                        </div>
-                    </li>
-                </ul>
+        <div class="contnavbar md:flex md:flex-col md:items-stretch md:opacity-100 md:relative md:mt-4  top-0 left-0 right-0 z-40 pl-6 h-auto  flex-1 rounded hidden" id="example-collapse-sidebar">
 
 
+          <ul class="md:flex-col md:min-w-full flex flex-col list-none">
+            <li class="">
 
+              <div>
+                <a class="text-black hover:text-blue-500 pt-8 text-xs uppercase py-3 font-bold block" href="index.php">
+                  <i class="bx bx-tv opacity-75 mr-2 text-sm"></i>Inicio</a>
+              </div>
+              <div class="">
+                <a class="text-black hover:text-blue-500 pt-2 text-xs uppercase py-3 font-bold block" href="feed.php">
+                  <i class='bx bxs-id-card opacity-75 mr-2 text-sm'></i>Feed</a>
+              </div>
 
-                <!-- contenedor de la barra de navegacion -->
-                <div class="contnavbar   md:flex md:flex-col md:items-stretch md:opacity-100 md:relative md:mt-4  top-0 left-0 right-0 z-40 overflow-y-auto overflow-x-hidden h-auto items-center flex-1 rounded hidden" id="example-collapse-sidebar">
-                    <div class="md:min-w-full md:hidden block pb-4 mb-4 border-b border-solid border-blueGray-200">
-                        <div class="flex flex-wrap">
-                            <div class="w-6/12">
-                                <a class="md:block text-left md:pb-2 text-blueGray-600 mr-0 inline-block whitespace-nowrap text-sm uppercase font-bold p-4 px-0" href="javascript:void(0)">
-                                    <?php
-                                    echo $_SESSION["name"];
-                                    ?>
-                                </a>
-                            </div>
-                            <div class="w-6/12 flex justify-end">
-                                <button type="button" class="cursor-pointer text-black opacity-50 md:hidden px-3 py-1 text-xl leading-none bg-transparent rounded border border-solid border-transparent" onclick="toggleNavbar('example-collapse-sidebar')">
-                                    <i class="fas fa-times"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <form class="mt-6 mb-4 md:hidden">
-                        <div class="mb-3 pt-0">
-                            <input type="text" placeholder="Search" class="border-0 px-3 py-2 h-12 border border-solid  border-blueGray-500 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-base leading-snug shadow-none outline-none focus:outline-none w-full font-normal" />
-                        </div>
-                    </form>
-                    <ul class="md:flex-col md:min-w-full flex flex-col list-none">
-                        <li class="items-center">
+              <div class="inline-flex">
+                <a class=" text-black hover:text-blue-500 pt-2 text-xs uppercase py-3 font-bold block" href="perfil.php">
+                  <i class='bx bx-user opacity-75 mr-2 text-sm'></i> Perfil</a>
+              </div>
+              <div class="">
+                <a class=" text-blue-500 hover:text-blue-500 pt-2 text-xs uppercase py-3 font-bold block" href="editar_perfil.php">
+                  <i class='bx bxs-edit opacity-75 mr-2 text-sm'></i>Editar Perfil</a>
+              </div>
+              <div class="">
+                <a class="text-black hover:text-blue-500 pt-2 text-xs uppercase py-3 font-bold block" href="cambiar_contrasena.php">
+                  <i class='bx bx-lock-alt opacity-75 mr-2 text-sm'></i>cambiar contraseña</a>
+              </div>
+              <div class="">
+                <a class="text-black hover:text-blue-500 pt-2 text-xs uppercase py-3 font-bold block" href="crear_publicacion.php">
+                  <i class='bx bx-layer-plus opacity-75 mr-2 text-sm'></i>agregar Publicacion</a>
+              </div>
 
-                            <div>
-                                <a class="text-black hover:text-blue-500 pt-8 text-xs uppercase py-3 font-bold block" href="index.php">
-                                    <i class="bx bx-tv opacity-75 mr-2 text-sm"></i>Inicio</a>
-                            </div>
-                            <div class="">
-                                <a class="text-black hover:text-blue-500 pt-2 text-xs uppercase py-3 font-bold block" href="feed.php">
-                                    <i class='bx bxs-id-card opacity-75 mr-2 text-sm'></i>Feed</a>
-                            </div>
-
-                            <div class="inline-flex">
-                                <a class=" text-blue-500 hover:text-blue-500 pt-2 text-xs uppercase py-3 font-bold block" href="perfil.php">
-                                    <i class='bx bx-user opacity-75 mr-2 text-sm'></i> Perfil</a>
-                            </div>
-                            <div class="">
-                                <a class=" text-black hover:text-blue-500 pt-2 text-xs uppercase py-3 font-bold block" href="editar_perfil.php">
-                                    <i class='bx bxs-edit opacity-75 mr-2 text-sm'></i>Editar Perfil</a>
-                            </div>
-                            <div class="">
-                                <a class="text-black hover:text-blue-500 pt-2 text-xs uppercase py-3 font-bold block" href="cambiar_contrasena.php">
-                                    <i class='bx bx-lock-alt opacity-75 mr-2 text-sm'></i>cambiar contraseña</a>
-                            </div>
-
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
         <div class="relative md:ml-64 bg-blueGray-50">
             <nav class="absolute top-0 left-0 w-full z-10 bg-transparent md:flex-row md:flex-nowrap md:justify-start flex items-center p-4">
                 <div class="w-full mx-autp items-center flex justify-between md:flex-nowrap flex-wrap md:px-10 px-4">
@@ -166,7 +104,7 @@ require(ROOT_PATH . DS . 'app' . DS . 'login' . DS . 'verificar-login.php');
                             <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8" />
                         </svg></a>
 
-                    <ul class="flex-col md:flex-row list-none items-center hidden md:flex">
+                    <!-- <ul class="flex-col md:flex-row list-none items-center hidden md:flex">
                         <a class="text-blueGray-500 block" href="#pablo" onclick="openDropdown(event,'user-dropdown')">
                             <div class="items-center flex">
                                 <span class="w-12 h-12 text-sm text-white bg-blueGray-200 inline-flex items-center justify-center rounded-full">
@@ -185,12 +123,12 @@ require(ROOT_PATH . DS . 'app' . DS . 'login' . DS . 'verificar-login.php');
                             <div class="h-0 my-2 border border-solid border-blueGray-100"></div>
                             <a href="login.php?logout=1" class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700">Cerrar sesión</a>
                         </div>
-                    </ul>
+                    </ul> -->
                 </div>
             </nav>
             <!-- Header -->
             <div class=" gradient w-full  ">
-            <div class="px-4 md:pl-20 pr-10 w-full">
+            <div class=" w-full">
 
                     <style>
                       .gradient{
@@ -201,13 +139,13 @@ require(ROOT_PATH . DS . 'app' . DS . 'login' . DS . 'verificar-login.php');
                       }
 
                         .header {
-                            background-image: url('./assets/img/portada.jpg');
-                            background-size: cover;
-                            border-radius: 10px;
-                            background-position: center;
-                            height: 300px;
-                            margin-left: 2px;
-                            position: relative;
+                          background-image: url('./assets/img/portada.jpg');
+                          margin-top: 0%;
+                          height: 400px;
+                          background-size: cover;
+                          background-position: center;
+                          position: relative;
+                          margin-left: 20px;
                         }
 
                         .profile-pic {
@@ -217,7 +155,7 @@ require(ROOT_PATH . DS . 'app' . DS . 'login' . DS . 'verificar-login.php');
                             border: 4px solid white;
                             position: absolute;
                             bottom: -64px;
-                            left: 2px;
+                            left: 24px;
                         }
 
                         .blue-bar {
@@ -322,7 +260,7 @@ require(ROOT_PATH . DS . 'app' . DS . 'login' . DS . 'verificar-login.php');
                             font-size: 18px;
                         }
                     </style>
-                    <h1 class="text-white font-serif  texto pb-6"> Editar Perfil</h1>
+                    <!-- <h1 class="text-white font-serif  texto pb-6"> Editar Perfil</h1> -->
 
                     <div class="header">
                         <img src="./assets/img/usuario.jpg" alt="Foto de perfil" class="profile-pic">
@@ -344,12 +282,16 @@ require(ROOT_PATH . DS . 'app' . DS . 'login' . DS . 'verificar-login.php');
                                 <textarea id="bio" name="bio">Ingeniero en Sistemas con más de 5 años de experiencia en el desarrollo y gestión de soluciones tecnológicas innovadoras. Apasionado por la programación y la optimización de procesos, con habilidades en lenguajes de programación como Python, Java y C++. Experto en la implementación de sistemas de seguridad y redes, y siempre en busca de nuevos desafíos para mejorar la eficiencia y la funcionalidad de los sistemas informáticos.</textarea>
                             </div>
                             <div class="form-group">
+                                <label for="empresa">Empresa para la cual Trabajo</label>
+                                <input type="text" id="empresa" name="empresa" value="AG Software">
+                            </div>
+                            <div class="form-group">
                                 <label for="location">Ubicación:</label>
                                 <input type="text" id="location" name="location" value="Nueva Segovia, Nicaragua">
                             </div>
                             <div class="form-group">
                                 <label for="website">Sitio web:</label>
-                                <input type="url" id="website" name="website" value="www.Neyzer.com">
+                                <input type="url" id="website" name="website" value="www.AGsoftware.com">
                             </div>
                             <div class="form-group">
                                 <label for="twitter">Twitter:</label>

@@ -23,12 +23,12 @@ require(ROOT_PATH . DS . 'app' . DS . 'login' . DS . 'verificar-login.php');
   <link rel="stylesheet" href="./navbar.css" />
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <title>Perfil-Carlos Rodriguez</title>
+  <title>Feed</title>
 </head>
 
 <body class="text-blueGray-700 antialiased">
   <div id="root">
-    <nav class="fondonavegacion md:w-72 md:left-0 md:block md:fixed md:top-0 md:bottom-0 md:overflow-y-auto md:flex-row md:flex-nowrap md:overflow-hidden shadow-xl bg-white flex flex-wrap items-center justify-between relative z-10 py-4 px-6">
+  <nav class="fondonavegacion md:w-72 md:left-0 md:block md:fixed md:top-0 md:bottom-0 md:overflow-y-auto md:flex-row md:flex-nowrap md:overflow-hidden shadow-xl bg-white flex flex-wrap items-center justify-between relative z-10 py-4 px-6">
       <div class="contenedornavegacion md:flex-col md:items-stretch md:min-h-full md:flex-nowrap px-0 flex flex-wrap items-center justify-between w-full mx-auto">
         <button class="cursor-pointer text-black opacity-50 md:hidden px-3 py-1 text-xl leading-none bg-transparent rounded border border-solid border-transparent" type="button" onclick="toggleNavbar('example-collapse-sidebar')">
           <i class="fas fa-bars"></i></button>
@@ -37,103 +37,41 @@ require(ROOT_PATH . DS . 'app' . DS . 'login' . DS . 'verificar-login.php');
           echo $_SESSION["name"];
           ?>
         </a>
-        <ul class="md:hidden items-center flex flex-wrap list-none">
-          <li class="inline-block relative">
-            <a class="text-blueGray-500 block py-1 px-3" href="#pablo" onclick="openDropdown(event,'notification-dropdown')"><i class="fas fa-bell"></i></a>
-            <div class="hidden bg-white text-base z-50 float-left py-2 list-none text-left rounded shadow-lg mt-1" style="min-width: 12rem;" id="notification-dropdown">
 
-              <a href="#pablo" class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700">
-                Action</a>
-
-              <a href="#pablo" class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700">Another action</a>
-
-              <a href="Crear_usuario.php" class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700">
-                crear usuario Nuevo
-              </a>
-
-              <div class="h-0 my-2 border border-solid border-blueGray-100"></div>
-
-              <a href="login.php?logout=1" class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700">
-                Cerrar sesión</a>
-            </div>
-          </li>
-          <li class="inline-block relative">
-            <a class="text-blueGray-500 block" href="#pablo" onclick="openDropdown(event,'user-responsive-dropdown')">
-              <div class="items-center flex">
-                <span class="w-12 h-12 text-sm text-white bg-blueGray-200 inline-flex items-center justify-center rounded-full"><img alt="..." class="w-full rounded-full align-middle border-none shadow-lg" src="./assets/img/usuario.jpg" /></span>
-              </div>
-            </a>
-            <div class="hidden bg-white text-base z-50 float-left py-2 list-none text-left rounded shadow-lg mt-1" style="min-width: 12rem;" id="user-responsive-dropdown">
-              <a href="#pablo" class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700">
-                Action</a>
-
-              <a href="#pablo" class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700">Another action</a>
-
-              <a href="Crear_usuario.php" class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700">
-                crear usuario Nuevo
-              </a>
-
-              <div class="h-0 my-2 border border-solid border-blueGray-100"></div>
-
-              <a href="login.php?logout=1" class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700">
-                Cerrar sesión</a>
-            </div>
-          </li>
-        </ul>
+        <div class="contnavbar md:flex md:flex-col md:items-stretch md:opacity-100 md:relative md:mt-4  top-0 left-0 right-0 z-40 pl-6 h-auto  flex-1 rounded hidden" id="example-collapse-sidebar">
 
 
-
-
-
-        <div class="contnavbar md:flex md:flex-col md:items-stretch md:opacity-100 md:relative md:mt-4  top-0 left-0 right-0 z-40 overflow-y-auto overflow-x-hidden h-auto items-center flex-1 rounded hidden" id="example-collapse-sidebar">
-          <div class="md:min-w-full md:hidden block pb-4 mb-4 border-b border-solid border-blueGray-200">
-            <div class="flex flex-wrap">
-              <div class="w-6/12">
-                <a class="md:block text-left md:pb-2 text-blueGray-600 mr-0 inline-block whitespace-nowrap text-sm uppercase font-bold p-4 px-0" href="javascript:void(0)">
-                  <?php
-                  echo $_SESSION["name"];
-                  ?>
-                </a>
-              </div>
-              <div class="w-6/12 flex justify-end">
-                <button type="button" class="cursor-pointer text-black opacity-50 md:hidden px-3 py-1 text-xl leading-none bg-transparent rounded border border-solid border-transparent" onclick="toggleNavbar('example-collapse-sidebar')">
-                  <i class="fas fa-times"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-          <form class="mt-6 mb-4 md:hidden">
-            <div class="mb-3 pt-0">
-              <input type="text" placeholder="Search" class="border-0 px-3 py-2 h-12 border border-solid  border-blueGray-500 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-base leading-snug shadow-none outline-none focus:outline-none w-full font-normal" />
-            </div>
-          </form>
           <ul class="md:flex-col md:min-w-full flex flex-col list-none">
-                        <li class="items-center">
+            <li class="">
 
-                            <div>
-                                <a class="text-black hover:text-blue-500 pt-8 text-xs uppercase py-3 font-bold block" href="index.php">
-                                    <i class="bx bx-tv opacity-75 mr-2 text-sm"></i>Inicio</a>
-                            </div>
-                            <div class="">
-                                <a class="text-blue-500 hover:text-blue-500 pt-2 text-xs uppercase py-3 font-bold block" href="feed.php">
-                                    <i class='bx bxs-id-card opacity-75 mr-2 text-sm'></i>Feed</a>
-                            </div>
+              <div>
+                <a class="text-black hover:text-blue-500 pt-8 text-xs uppercase py-3 font-bold block" href="index.php">
+                  <i class="bx bx-tv opacity-75 mr-2 text-sm"></i>Inicio</a>
+              </div>
+              <div class="">
+                <a class="text-blue-500 hover:text-blue-500 pt-2 text-xs uppercase py-3 font-bold block" href="feed.php">
+                  <i class='bx bxs-id-card opacity-75 mr-2 text-sm'></i>Feed</a>
+              </div>
 
-                            <div class="inline-flex">
-                                <a class=" text-black hover:text-blue-500 pt-2 text-xs uppercase py-3 font-bold block" href="perfil.php">
-                                    <i class='bx bx-user opacity-75 mr-2 text-sm'></i> Perfil</a>
-                            </div>
-                            <div class="">
-                                <a class=" text-black hover:text-blue-500 pt-2 text-xs uppercase py-3 font-bold block" href="editar_perfil.php">
-                                    <i class='bx bxs-edit opacity-75 mr-2 text-sm'></i>Editar Perfil</a>
-                            </div>
-                            <div class="">
-                                <a class="text-black hover:text-blue-500 pt-2 text-xs uppercase py-3 font-bold block" href="cambiar_contrasena.php">
-                                    <i class='bx bx-lock-alt opacity-75 mr-2 text-sm'></i>cambiar contraseña</a>
-                            </div>
+              <div class="inline-flex">
+                <a class=" text-black hover:text-blue-500 pt-2 text-xs uppercase py-3 font-bold block" href="perfil.php">
+                  <i class='bx bx-user opacity-75 mr-2 text-sm'></i> Perfil</a>
+              </div>
+              <div class="">
+                <a class=" text-black hover:text-blue-500 pt-2 text-xs uppercase py-3 font-bold block" href="editar_perfil.php">
+                  <i class='bx bxs-edit opacity-75 mr-2 text-sm'></i>Editar Perfil</a>
+              </div>
+              <div class="">
+                <a class="text-black hover:text-blue-500 pt-2 text-xs uppercase py-3 font-bold block" href="cambiar_contrasena.php">
+                  <i class='bx bx-lock-alt opacity-75 mr-2 text-sm'></i>cambiar contraseña</a>
+              </div>
+              <div class="">
+                <a class="text-black hover:text-blue-500 pt-2 text-xs uppercase py-3 font-bold block" href="crear_publicacion.php">
+                  <i class='bx bx-layer-plus opacity-75 mr-2 text-sm'></i>agregar Publicacion</a>
+              </div>
 
-                        </li>
-                    </ul>
+            </li>
+          </ul>
         </div>
       </div>
     </nav>
@@ -224,13 +162,56 @@ require(ROOT_PATH . DS . 'app' . DS . 'login' . DS . 'verificar-login.php');
         .btn:hover {
             background-color: #1557b0;
         }
-        .profile-card {
+        .profile-informatica {
             background-image: url(./assets/img/feedheaderinf.png);
             border-radius: 8px;
             padding: 20px;        
             text-align: center;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            background-size: cover;
         }
+        .profile-enfermeria {
+            background-image: url(./assets/img/enfermeriaportada.png);
+            border-radius: 8px;
+            padding: 20px;        
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            background-size: cover;
+          
+        }
+        .profile-farmacia {
+            background-image: url(./assets/img/farmaciaportada.png);
+            border-radius: 8px;
+            padding: 20px;        
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            background-size: cover;
+        }
+        .profile-psicologia {
+            background-image: url(./assets/img/psicologiaportada.png);
+            border-radius: 8px;
+            padding: 20px;        
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            background-size: cover;
+        }
+        .profile-ingles {
+            background-image: url(./assets/img/inglesportada.png);
+            border-radius: 8px;
+            padding: 20px;        
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            background-size: cover;
+        }
+        
+
+
+
+
+
+
+
+
         .profile-image {
             width: 150px;
             height: 150px;
@@ -308,54 +289,99 @@ require(ROOT_PATH . DS . 'app' . DS . 'login' . DS . 'verificar-login.php');
     <div class="container">
         <div class="contenedor">
         <div class="feed">
-            <div class="profile-card">
+            <div class="profile-informatica">
                 <img src="./assets/img/perfil5.png" alt="Carlos Rodríguez" class="profile-image">
-                <div class="profile-name">Carlos Rodríguez</div>
-                <div class="profile-info">Ingeniería Informática - 4º año</div>
-                <a href="#" class="view-profile">Ver perfil</a>
+                <div class="profile-name">Carlos Rodríguez
+              </div>
+                <div class="profile-info">Ingeniería Informática - 4º año <br>
+                estudiante de Informática en la Universidad Martin Lutero. Con 2 años de experiencia en desarrollo de software y soporte técnico, apasionado por la programación y la ciberseguridad. Siempre en busca de nuevos conocimientos para innovar y resolver problemas tecnológicos.
+
+              </div>
+                <a href="Perfilcarlos.php" class="view-profile">Ver perfil</a>
             </div>
         </div>
-            <!-- Puedes agregar más tarjetas de perfil aquí -->
             <div class="feed">
-            <div class="profile-card">
-                <img src="./assets/img/perfil5.png" alt="Carlos Rodríguez" class="profile-image">
-                <div class="profile-name">Carlos Rodríguez</div>
-                <div class="profile-info">Ingeniería Informática - 4º año</div>
+            <div class="profile-enfermeria">
+                <img src="./assets/img/perfil1.png" alt="Carlos Rodríguez" class="profile-image">
+                <div class="profile-name">Ana García</div>
+                <div class="profile-info">Lic. Enfermeria - 4º año <br>
+              soy estudiante de Enfermería en la Universidad Martin Lutero, con 3 años de experiencia en prácticas clínicas. Apasionada por el cuidado del paciente, con habilidades en atención de emergencias y promoción de salud. Siempre en búsqueda de aprender más para ofrecer el mejor cuidado posible
+              </div>
                 <a href="#" class="view-profile">Ver perfil</a>
             </div>
             </div>
             <div class="feed">
-            <div class="profile-card">
-                <img src="./assets/img/perfil5.png" alt="Carlos Rodríguez" class="profile-image">
-                <div class="profile-name">Carlos Rodríguez</div>
-                <div class="profile-info">Ingeniería Informática - 4º año</div>
+            <div class="profile-farmacia">
+                <img src="./assets/img/perfil7.png" alt="Carlos Rodríguez" class="profile-image">
+                <div class="profile-name">Jefferson Guillén</div>
+                <div class="profile-info">Lic.  Farmacia - 3º año <br>
+               soy estudiante de Farmacia en la Universidad Martin Lutero. Con 3 años de experiencia en prácticas farmacéuticas, me especializo en la dispensación de medicamentos y asesoría sobre su uso adecuado. Apasionado por la química y la salud pública, siempre busco aprender más para mejorar la atención al paciente y la seguridad farmacológica.
+              </div>
                 <a href="#" class="view-profile">Ver perfil</a>
             </div>
             </div>
             <div class="feed">
-            <div class="profile-card">
-                <img src="./assets/img/perfil5.png" alt="Carlos Rodríguez" class="profile-image">
-                <div class="profile-name">Carlos Rodríguez</div>
-                <div class="profile-info">Ingeniería Informática - 4º año</div>
+            <div class="profile-psicologia">
+                <img src="./assets/img/perfil3.png" alt="Carlos Rodríguez" class="profile-image">
+                <div class="profile-name">Laura Martínez</div>
+                <div class="profile-info">Lic. Psicología - 3º año <br>
+               soy estudiante de Psicología en la Universidad Martin Lutero. Con 1 año de experiencia en prácticas clínicas, me especializo en la atención a jóvenes y adolescentes. Apasionada por el estudio del comportamiento humano y la promoción del bienestar mental. Siempre busco aprender más para ofrecer apoyo emocional de calidad.
+              </div>
                 <a href="#" class="view-profile">Ver perfil</a>
             </div>
             </div>
             <div class="feed">
-            <div class="profile-card">
-                <img src="./assets/img/perfil5.png" alt="Carlos Rodríguez" class="profile-image">
-                <div class="profile-name">Carlos Rodríguez</div>
-                <div class="profile-info">Ingeniería Informática - 4º año</div>
-                <a href="#" class="view-profile">Ver perfil</a>
-            </div>
-            </div>
-            <div class="feed">
-            <div class="profile-card">
-                <img src="./assets/img/perfil5.png" alt="Carlos Rodríguez" class="profile-image">
-                <div class="profile-name">Carlos Rodríguez</div>
-                <div class="profile-info">Ingeniería Informática - 4º año</div>
+            <div class="profile-ingles">
+                <img src="./assets/img/perfil4.png" alt="Carlos Rodríguez" class="profile-image">
+                <div class="profile-name">Diego Sánchez</div>
+                <div class="profile-info">Lic. Ingles - 5º año <br>
+                soy estudiante de Ingles en la Universidad Martin Lutero, con 1 año de experiencia en prácticas de enseñanza. Apasionado por la educación, hábil en la traducción y promoción de la comprensión intercultural. Siempre dispuesto a aprender y mejorar mis habilidades para ofrecer una enseñanza de calidad
+              </div>
                 <a href="#" class="view-profile">Ver perfil</a>
             </div>
            </div>
+           <div class="feed">
+            <div class="profile-enfermeria">
+                <img src="./assets/img/perfil8.png" alt="Carlos Rodríguez" class="profile-image">
+                <div class="profile-name">Leyla Guzmán</div>
+                <div class="profile-info">Lic. Enfermería - 3º año <br>
+                soy estudiante de Enfermería en la Universidad Martin Lutero, con 2 años de experiencia en prácticas clínicas. Apasionada por el cuidado del paciente, con habilidades en atención de emergencias y promoción de salud. Siempre en búsqueda de aprender más para ofrecer el mejor cuidado posible
+              </div>
+                <a href="#" class="view-profile">Ver perfil</a>
+            </div>
+           </div>
+           <div class="feed">
+            <div class="profile-psicologia">
+                <img src="./assets/img/perfil2.png" alt="Carlos Rodríguez" class="profile-image">
+                <div class="profile-name">María López</div>
+                <div class="profile-info">Lic. Psicología - Egresado <br>
+                soy estudiante de Psicología en la Universidad Martin Lutero. Con 4 años de experiencia en prácticas clínicas, me especializo en la atención a jóvenes y adolescentes. Apasionada por el estudio del comportamiento humano y la promoción del bienestar mental. Siempre busco aprender más para ofrecer apoyo emocional de calidad.
+              </div>
+                <a href="#" class="view-profile">Ver perfil</a>
+            </div>
+           </div>
+           <div class="feed">
+            <div class="profile-informatica">
+                <img src="./assets/img/perfil6.png" alt="Carlos Rodríguez" class="profile-image">
+                <div class="profile-name">Javier Fernández</div>
+                <div class="profile-info">Ingeniería Informática - Egresado <br>
+                estudiante de Informática en la Universidad Martin Lutero. Con 4 años de experiencia en desarrollo de software y soporte técnico, apasionado por la programación y la ciberseguridad. Siempre en busca de nuevos conocimientos para innovar y resolver problemas tecnológicos.
+
+              </div>
+                <a href="#" class="view-profile">Ver perfil</a>
+            </div>
+           </div>
+           <div class="feed">
+            <div class="profile-ingles">
+                <img src="./assets/img/perfil9.png" alt="Carlos Rodríguez" class="profile-image">
+                <div class="profile-name">Janier Morán</div>
+                <div class="profile-info">Lic. Ingles - Egresado <br>
+               soy estudiante de Ingles en la Universidad Martin Lutero, con 3 años de experiencia en prácticas de enseñanza. Apasionado por la educación, hábil en la traducción y promoción de la comprensión intercultural. Siempre dispuesto a aprender y mejorar mis habilidades para ofrecer una enseñanza de calidad.
+              </div>
+                <a href="#" class="view-profile">Ver perfil</a>
+            </div>
+           </div>
+           
         </div>
     </div>
 

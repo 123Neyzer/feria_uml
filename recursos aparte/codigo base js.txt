@@ -1,4 +1,0 @@
-let nav_bar = document.getElementById('nav_bar');
-if (nav_bar){
-    nav_bar.innerHTML = ` 
-`}

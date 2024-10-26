@@ -37,102 +37,40 @@ require(ROOT_PATH . DS . 'app' . DS . 'login' . DS . 'verificar-login.php');
           echo $_SESSION["name"];
           ?>
         </a>
-        <ul class="md:hidden items-center flex flex-wrap list-none">
-          <li class="inline-block relative">
-            <a class="text-blueGray-500 block py-1 px-3" href="#pablo" onclick="openDropdown(event,'notification-dropdown')"><i class="fas fa-bell"></i></a>
-            <div class="hidden bg-white text-base z-50 float-left py-2 list-none text-left rounded shadow-lg mt-1" style="min-width: 12rem;" id="notification-dropdown">
 
-              <a href="#pablo" class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700">
-                Action</a>
-
-              <a href="#pablo" class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700">Another action</a>
-
-              <a href="Crear_usuario.php" class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700">
-                crear usuario Nuevo
-              </a>
-
-              <div class="h-0 my-2 border border-solid border-blueGray-100"></div>
-
-              <a href="login.php?logout=1" class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700">
-                Cerrar sesión</a>
-            </div>
-          </li>
-          <li class="inline-block relative">
-            <a class="text-blueGray-500 block" href="#pablo" onclick="openDropdown(event,'user-responsive-dropdown')">
-              <div class="items-center flex">
-                <span class="w-12 h-12 text-sm text-white bg-blueGray-200 inline-flex items-center justify-center rounded-full"><img alt="..." class="w-full rounded-full align-middle border-none shadow-lg" src="./assets/img/usuario.jpg" /></span>
-              </div>
-            </a>
-            <div class="hidden bg-white text-base z-50 float-left py-2 list-none text-left rounded shadow-lg mt-1" style="min-width: 12rem;" id="user-responsive-dropdown">
-              <a href="#pablo" class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700">
-                Action</a>
-
-              <a href="#pablo" class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700">Another action</a>
-
-              <a href="Crear_usuario.php" class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700">
-                crear usuario Nuevo
-              </a>
-
-              <div class="h-0 my-2 border border-solid border-blueGray-100"></div>
-
-              <a href="login.php?logout=1" class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700">
-                Cerrar sesión</a>
-            </div>
-          </li>
-        </ul>
+        <div class="contnavbar md:flex md:flex-col md:items-stretch md:opacity-100 md:relative md:mt-4  top-0 left-0 right-0 z-40 pl-6 h-auto  flex-1 rounded hidden" id="example-collapse-sidebar">
 
 
-
-
-
-        <div class="contnavbar md:flex md:flex-col md:items-stretch md:opacity-100 md:relative md:mt-4  top-0 left-0 right-0 z-40 overflow-y-auto overflow-x-hidden h-auto items-center flex-1 rounded hidden" id="example-collapse-sidebar">
-          <div class="md:min-w-full md:hidden block pb-4 mb-4 border-b border-solid border-blueGray-200">
-            <div class="flex flex-wrap">
-              <div class="w-6/12">
-                <a class="md:block text-left md:pb-2 text-blueGray-600 mr-0 inline-block whitespace-nowrap text-sm uppercase font-bold p-4 px-0" href="javascript:void(0)">
-                  <?php
-                  echo $_SESSION["name"];
-                  ?>
-                </a>
-              </div>
-              <div class="w-6/12 flex justify-end">
-                <button type="button" class="cursor-pointer text-black opacity-50 md:hidden px-3 py-1 text-xl leading-none bg-transparent rounded border border-solid border-transparent" onclick="toggleNavbar('example-collapse-sidebar')">
-                  <i class="fas fa-times"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-          <form class="mt-6 mb-4 md:hidden">
-            <div class="mb-3 pt-0">
-              <input type="text" placeholder="Search" class="border-0 px-3 py-2 h-12 border border-solid  border-blueGray-500 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-base leading-snug shadow-none outline-none focus:outline-none w-full font-normal" />
-            </div>
-          </form>
           <ul class="md:flex-col md:min-w-full flex flex-col list-none">
-          <li class="items-center">
+            <li class="">
 
-<div>
-    <a class="text-blue-500 hover:text-blue-500 pt-8 text-xs uppercase py-3 font-bold block" href="index.php">
-        <i class="bx bx-tv opacity-75 mr-2 text-sm"></i>Inicio</a>
-</div>
-<div class="">
-    <a class="text-black hover:text-blue-500 pt-2 text-xs uppercase py-3 font-bold block" href="feed.php">
-    <i class='bx bxs-id-card opacity-75 mr-2 text-sm'></i>Feed</a>
-</div>
+              <div>
+                <a class="text-blue-500 hover:text-blue-500 pt-8 text-xs uppercase py-3 font-bold block" href="index.php">
+                  <i class="bx bx-tv opacity-75 mr-2 text-sm"></i>Inicio</a>
+              </div>
+              <div class="">
+                <a class="text-black hover:text-blue-500 pt-2 text-xs uppercase py-3 font-bold block" href="feed.php">
+                  <i class='bx bxs-id-card opacity-75 mr-2 text-sm'></i>Feed</a>
+              </div>
 
-<div class="inline-flex">
-    <a class=" text-black hover:text-blue-500 pt-2 text-xs uppercase py-3 font-bold block" href="perfil.php">
-        <i class='bx bx-user opacity-75 mr-2 text-sm'></i> Perfil</a>
-</div>
-<div class="">
-    <a class=" text-black hover:text-blue-500 pt-2 text-xs uppercase py-3 font-bold block" href="editar_perfil.php">
-        <i class='bx bxs-edit opacity-75 mr-2 text-sm'></i>Editar Perfil</a>
-</div>
-<div class="">
-    <a class="text-black hover:text-blue-500 pt-2 text-xs uppercase py-3 font-bold block" href="cambiar_contrasena.php">
-        <i class='bx bx-lock-alt opacity-75 mr-2 text-sm'></i>cambiar contraseña</a>
-</div>
+              <div class="inline-flex">
+                <a class=" text-black hover:text-blue-500 pt-2 text-xs uppercase py-3 font-bold block" href="perfil.php">
+                  <i class='bx bx-user opacity-75 mr-2 text-sm'></i> Perfil</a>
+              </div>
+              <div class="">
+                <a class=" text-black hover:text-blue-500 pt-2 text-xs uppercase py-3 font-bold block" href="editar_perfil.php">
+                  <i class='bx bxs-edit opacity-75 mr-2 text-sm'></i>Editar Perfil</a>
+              </div>
+              <div class="">
+                <a class="text-black hover:text-blue-500 pt-2 text-xs uppercase py-3 font-bold block" href="cambiar_contrasena.php">
+                  <i class='bx bx-lock-alt opacity-75 mr-2 text-sm'></i>cambiar contraseña</a>
+              </div>
+              <div class="">
+                <a class="text-black hover:text-blue-500 pt-2 text-xs uppercase py-3 font-bold block" href="crear_publicacion.php">
+                  <i class='bx bx-layer-plus opacity-75 mr-2 text-sm'></i>agregar Publicacion</a>
+              </div>
 
-</li>
+            </li>
           </ul>
         </div>
       </div>
@@ -169,11 +107,11 @@ require(ROOT_PATH . DS . 'app' . DS . 'login' . DS . 'verificar-login.php');
         </div>
       </nav>
       <!-- Header -->
-       <style>
-          .gradient{
-           background: linear-gradient(to right, #0066ff, #00ccff);
-          }
-       </style>
+      <style>
+        .gradient {
+          background: linear-gradient(to right, #0066ff, #00ccff);
+        }
+      </style>
       <div class="relative gradient md:pt-24 pb- h-auto pb-12 pt-12">
         <div class="px-4 md:pl-20 pr-10 mx-auto w-full">
           <div>
@@ -188,7 +126,7 @@ require(ROOT_PATH . DS . 'app' . DS . 'login' . DS . 'verificar-login.php');
                           Estudiantes de 1ro y 2do año
                         </h5>
                         <span class="font-semibold text-xl text-blueGray-700">
-                          300
+                          315
                         </span>
                       </div>
                       <div class="relative w-auto pl-4 flex-initial">
@@ -219,7 +157,7 @@ require(ROOT_PATH . DS . 'app' . DS . 'login' . DS . 'verificar-login.php');
                           Estudiantes de 3ro y 4to Año
                         </h5>
                         <span class="font-semibold text-xl text-blueGray-700">
-                          150
+                          135
                         </span>
                       </div>
                       <div class="relative w-auto pl-4 flex-initial">
@@ -246,11 +184,11 @@ require(ROOT_PATH . DS . 'app' . DS . 'login' . DS . 'verificar-login.php');
                   <div class="flex-auto p-4">
                     <div class="flex flex-wrap">
                       <div class="relative w-full pr-4 max-w-full flex-grow flex-1">
-                        <h5 class="text-blueGray-400 mt-1 mb-2 uppercase font-bold text-xs">
+                        <h5 class="text-blueGray-400  uppercase font-bold text-xs">
                           Estudiantes de 5to Año
                         </h5>
                         <span class="font-semibold text-xl text-blueGray-700">
-                          150
+                          135
                         </span>
                       </div>
                       <div class="relative w-auto pl-4 flex-initial">
@@ -259,7 +197,7 @@ require(ROOT_PATH . DS . 'app' . DS . 'login' . DS . 'verificar-login.php');
                         </div>
                       </div>
                     </div>
-                    <p class="text-sm text-blueGray-400 mt-5">
+                    <p class="text-sm text-blueGray-400 mt-[15px]">
                       <span class="text-orange-500 mr-2">
                         <i class="fas fa-arrow-down"></i> 15%
                       </span>
@@ -275,11 +213,11 @@ require(ROOT_PATH . DS . 'app' . DS . 'login' . DS . 'verificar-login.php');
                   <div class="flex-auto p-4">
                     <div class="flex flex-wrap">
                       <div class="relative w-full pr-4 max-w-full flex-grow flex-1">
-                        <h5 class="text-blueGray-400 uppercase mt-1 mb-2 font-bold text-xs">
+                        <h5 class="text-blueGray-400 uppercase font-bold text-xs">
                           Estudiantes egresados
                         </h5>
                         <span class="font-semibold text-xl text-blueGray-700">
-                          300
+                          315
 
                         </span>
                       </div>
@@ -294,7 +232,7 @@ require(ROOT_PATH . DS . 'app' . DS . 'login' . DS . 'verificar-login.php');
                         </div>
                       </div>
                     </div>
-                    <p class="text-sm text-blueGray-400 mt-5">
+                    <p class="text-sm text-blueGray-400 mt-[15px]">
                       <span class="text-emerald-500 mr-2">
                         <i class="fas fa-arrow-up"></i> 35%
                       </span>
@@ -352,39 +290,39 @@ require(ROOT_PATH . DS . 'app' . DS . 'login' . DS . 'verificar-login.php');
 
             <div class="students-grid" id="estudiantes-recomendados">
               <div class="student-card">
-                <img src="./assets/img/perfil1.png" alt="Ana García" class="student-avatar">
-                <h3>Ana García</h3>
-                <p>Ingeniería Informática - 4º año</p>
-                <a href="perfil.php" class="btn">Ver perfil</a>
-              </div>
-              <div class="student-card">
-                <img src="./assets/img/perfil7.png" alt="Jefferson Guillen" class="student-avatar">
-                <h3>Jefferson Guillén</h3>
-                <p> Farmacia - 3º año</p>
-                <a href="perfil.php" class="btn">Ver perfil</a>
-              </div>
-              <div class="student-card">
                 <img src="./assets/img/perfil5.png" alt="Carlos Rodríguez" class="student-avatar">
                 <h3>Carlos Rodríguez</h3>
                 <p>Ingeniería Informática - 4º año</p>
                 <a href="perfilcarlos.php" class="btn">Ver perfil</a>
               </div>
               <div class="student-card">
+                <img src="./assets/img/perfil1.png" alt="Ana García" class="student-avatar">
+                <h3>Ana García</h3>
+                <p>Lic. Enfermeria - 4º año</p>
+                <a href="perfil.php" class="btn">Ver perfil</a>
+              </div>
+              <div class="student-card">
+                <img src="./assets/img/perfil7.png" alt="Jefferson Guillen" class="student-avatar">
+                <h3>Jefferson Guillén</h3>
+                <p>Lic. Farmacia - 3º año</p>
+                <a href="perfil.php" class="btn">Ver perfil</a>
+              </div>
+              <div class="student-card">
                 <img src="./assets/img/perfil3.png" alt="Laura Martínez" class="student-avatar">
                 <h3>Laura Martínez</h3>
-                <p>Psicología - 3º año</p>
+                <p>Lic. Psicología - 3º año</p>
                 <a href="#" class="btn">Ver perfil</a>
               </div>
               <div class="student-card">
                 <img src="./assets/img/perfil4.png" alt="Diego Sánchez" class="student-avatar">
                 <h3>Diego Sánchez</h3>
-                <p>Ingeniería Informática - 5º año</p>
+                <p>Lic. Ingles - 5º año</p>
                 <a href="#" class="btn">Ver perfil</a>
               </div>
               <div class="student-card">
                 <img src="./assets/img/perfil8.png" alt="Leyla Guzman" class="student-avatar">
                 <h3>Leyla Guzmán</h3>
-                <p>Enfermería - 3º año</p>
+                <p>Lic. Enfermería - 3º año</p>
                 <a href="perfil.php" class="btn">Ver perfil</a>
               </div>
             </div>
@@ -394,7 +332,7 @@ require(ROOT_PATH . DS . 'app' . DS . 'login' . DS . 'verificar-login.php');
               <div class="student-card">
                 <img src="./assets/img/perfil2.png" alt="María López" class="student-avatar">
                 <h3>María López</h3>
-                <p>Psicología - Egresado</p>
+                <p>Lic. Psicología - Egresado</p>
                 <a href="#" class="btn">Ver perfil</a>
               </div>
               <div class="student-card">
@@ -406,7 +344,7 @@ require(ROOT_PATH . DS . 'app' . DS . 'login' . DS . 'verificar-login.php');
               <div class="student-card">
                 <img src="./assets/img/perfil9.png" alt="Javier Fernández" class="student-avatar">
                 <h3>Janier Morán</h3>
-                <p>Ingles - Egresado</p>
+                <p>Lic. Ingles - Egresado</p>
                 <a href="#" class="btn">Ver perfil</a>
               </div>
             </div>

@@ -78,7 +78,7 @@ require(ROOT_PATH . DS . 'app' . DS . 'login' . DS . 'verificar-login.php');
         <div class="relative md:ml-64 bg-blueGray-50">
             <nav class="absolute top-0 left-0 w-full z-10 bg-transparent md:flex-row md:flex-nowrap md:justify-start flex items-center p-4">
                 <div class="w-full mx-autp items-center flex justify-between md:flex-nowrap flex-wrap md:px-10 px-4">
-                    <a class="text-white text-sm uppercase hidden pt-4 lg:inline-block font-semibold" href="./perfilcarlos.php"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                    <a class="text-white text-sm uppercase hidden pt-4 lg:inline-block font-semibold" href="./index.php"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
                             <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8" />
                         </svg></a>
 
@@ -173,9 +173,11 @@ require(ROOT_PATH . DS . 'app' . DS . 'login' . DS . 'verificar-login.php');
         .btn {
           /* alinear al centro */
             display: block;
+            text-align: center;
             margin: 0 auto;
             background-color: #1a73e8;
             color: white;
+            width:20%;
             border: none;
             padding: 12px 20px;
             border-radius: 4px;
@@ -319,7 +321,7 @@ require(ROOT_PATH . DS . 'app' . DS . 'login' . DS . 'verificar-login.php');
                 <label for="projects">Proyectos destacados:</label>
                 <textarea id="projects" name="projects"></textarea>
             </div>
-            <button type="submit" class="btn">Crear Perfil</button>
+            <a href="index.php" type="submit" class="btn">Crear Perfil</a>
         </form>
     </div>
     <script>

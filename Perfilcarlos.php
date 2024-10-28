@@ -255,7 +255,7 @@ require(ROOT_PATH . DS . 'app' . DS . 'login' . DS . 'verificar-login.php');
         <div class="profile-section">
             <h2>Experiencia</h2>
             <div class="experience-item">
-                <h3>Desarrolladora Web Junior - AG software</h3>
+                <h3>Desarrollador Web Junior - AG software</h3>
                 <p>Junio 2023 - Junio 2024 </p>
                 <p>Desarrollo de aplicaciones web utilizando React y Node.js. Colaboración en proyectos de e-commerce y sistemas de gestión internos.</p>
             </div>
